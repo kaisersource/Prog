@@ -10,9 +10,9 @@ package eslista0;
  * @author BACKSLASHZERO
  */
 public class Elemento {
-    int info;
-    Elemento next;
-    public Elemento(int info, Elemento next){
+    int info; //valore
+    Elemento next;//puntatore all'elemento successivo
+    public Elemento(int info, Elemento next){//Creazione del costruttore
             this.info=info;
             this.next=next;
     }
