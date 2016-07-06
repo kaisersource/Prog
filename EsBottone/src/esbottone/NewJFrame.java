@@ -22,13 +22,13 @@ public class NewJFrame extends javax.swing.JFrame {
        boolean somma(){
          
         try{
-          a=Integer.parseInt(jTextField1.getText());
-          b=Integer.parseInt(jTextField2.getText());
+          a=Integer.parseInt(jTextField1.getText()); //restituisce il testo come stringa,convertendo esplicitamente in intero
+          b=Integer.parseInt(jTextField2.getText());//restituisce il testo come stringa,convertendo esplicitamente in intero
          
         }
        
         catch (NumberFormatException ex ){return false;}
-        somma=a+b;
+        somma=a+b;//ora che sono interi posso sommare
     
     return true;
     }
@@ -97,8 +97,8 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       if(somma()==true)
-           jLabel1.setText(""+somma);
+       if(somma()==true)//se la somma e' stata eseguita
+           jLabel1.setText(""+somma);//nella label converto implicitamente in stringa somma con le "" concatenando somma
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
