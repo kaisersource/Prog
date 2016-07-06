@@ -17,7 +17,7 @@ public class Lista {
     }
     
     public void visualizza(){
-        Elemento e=testa;
+        Elemento e=testa;//creo una copia di testa cosi' lavoro su 'e', quando  scorro la lista  non distruggo 'testa', ma 'e'
     
         while(e!=null){
             System.out.print(e.info+" ");
