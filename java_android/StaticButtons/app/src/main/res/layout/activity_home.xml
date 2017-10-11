@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/testohome"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Inserisci la dimensione"
+        android:textSize="32dp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="163dp"
+        tools:text="Inserisci la dimensione" />
+
+    <TextView
+        android:id="@+id/testo2home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="(3,4 o 5)"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="234dp"
+        tools:text="(3,4 o 5)" />
+
+
+    <!--<EditText
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="234dp" /> -->
+
+    <Button
+        android:id="@+id/prosegui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prosegui"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <RadioGroup
+        android:id="@+id/homegroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/rb_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/rb_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+    </RadioGroup>
+
+
+</LinearLayout>
+
