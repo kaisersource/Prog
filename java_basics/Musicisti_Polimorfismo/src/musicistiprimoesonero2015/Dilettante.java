@@ -6,7 +6,7 @@ package musicistiprimoesonero2015;
 
 /**
  *
- * @author stefano
+ * @author kaisersource
  */
 public class Dilettante extends Musicista{
     boolean legge;

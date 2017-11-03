@@ -24,16 +24,16 @@ public class Server {
         
         try {
             int n;
-            ServerSocket ss=new ServerSocket(3003);
-            Socket s;
+            ServerSocket ss=new ServerSocket(3003); //creazione del socket, il parametro richiesto è la porta
+            Socket s; //creazione del socket 
             while(true){
-                n=(int)(Math.random()*10);
-                s=ss.accept();
-                Thread t=new ThreadServer(s,n);
-                t.start();
+                n=(int)(Math.random()*10); //generazione del numero
+                s=ss.accept(); //assegno il parametro restituito dal metodo accept
+                Thread t=new ThreadServer(s,n); //threadserver vuore il risultato della accept e il numero n generato casualmente
+                t.start(); //fa partire la thread
             }
         } catch (IOException ex) {
-            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex); //se fallisce qualche metodo viene restituito un errore
         }
             
     }

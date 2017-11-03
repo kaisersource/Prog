@@ -6,7 +6,7 @@ package musicistiprimoesonero2015;
 
 /**
  *
- * @author stefano
+ * @author kaisersource
  */
 public class Professionista extends Musicista {
     int anni;

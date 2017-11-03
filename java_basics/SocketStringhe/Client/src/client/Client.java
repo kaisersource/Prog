@@ -27,19 +27,19 @@ public class Client {
             String ip = "localhost";
             Socket s = new Socket(ip, port);
             int a;//elemento casuale
-            PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+            PrintWriter out = new PrintWriter(s.getOutputStream(), true); //la printwriter consente stampa degli oggetti in stringhe
             int n = (int) (Math.random() * 30); //numero degli elementi casuali
             int k;
             for (int i = 0; i < n; i++) {
                 k=(int)(Math.random()*10);
                 out.println(k);
             }
-            out.println(0);
-            out.close();
-            s.close();
+            out.println(0); 
+            out.close();//chiusura dello stream
+            s.close();//chiusura del socket
 
         } catch (IOException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex); //rilevamento e stampa degli errori
         }
     }
 

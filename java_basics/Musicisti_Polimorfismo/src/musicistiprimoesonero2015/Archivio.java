@@ -8,12 +8,12 @@ import java.util.Random;
 
 /**
  *
- * @author stefano
+ * @author kaisersource
  */
 public class Archivio {
     Musicista V[];
     
-    public Archivio (int n, int m){
+    public Archivio (int n, int m){ //n professionisti, m dilettanti
         V = new Musicista[n+m];
         Random r = new Random();
         for (int i=0; i < n ; i++){

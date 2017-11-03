@@ -6,7 +6,7 @@ package musicistiprimoesonero2015;
 
 /**
  *
- * @author stefano
+ * @author kaisersource
  */
 public abstract class Musicista {
     String nome;

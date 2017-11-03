@@ -17,36 +17,36 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ThreadServer extends Thread{
-    Socket s;
-    int m,n,count=0;
+    Socket s; 
+    int m,n,count=0; //queste sono variabili di classe
     
-    public ThreadServer(Socket s,int n){
-    this.s=s;
-    this.n=n;
+    public ThreadServer(Socket s,int n){ //parametri del costruttore
+    this.s=s; //this riguarda le variabili di classe
+    this.n=n; //questa è una variabile locale associata al metodo costruttore, dunque non di classe.
     }
-    public void run(){
+    public void run(){ //ciò che viene eseguito quando eseguo la start
         try {
-            BufferedReader br=new BufferedReader(new InputStreamReader(s.getInputStream()));
+            BufferedReader br=new BufferedReader(new InputStreamReader(s.getInputStream())); //classe per leggere ciò che mi viene passato dal socket
             String str;
-            while((str=br.readLine())!=null){
-            if(str.equals("0")){
+            while((str=br.readLine())!=null){ //finché c'è qualcosa da leggere
+            if(str.equals("0")){ //equals è per le stringhe, se legge la stringa "0" interrompe la thread
                 break;
             }
             else{
                 
-                m=Integer.parseInt(str);
+                m=Integer.parseInt(str); //str viene inserita nella classe wrapper Integer per poter essere castato a intero
                 System.out.println("i valori di m sono: "+m);
-                    if(m==n)
-                        count++;
+                    if(m==n) //ogniqualvolta il numero m è uguale ad uno dei numeri passati via socket
+                        count++; //incrementa il contatore
                     
                     }
             }
             System.out.println(n);
             System.out.println("il numero di volte che è comparso un numero uguale a M è"+count);
-            br.close();
-            s.close();
+            br.close(); //chiusura del buffer
+            s.close(); //chiusura del socket
         } catch (IOException ex) {
-            Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex); //restituisce 
         }
     }
 }
