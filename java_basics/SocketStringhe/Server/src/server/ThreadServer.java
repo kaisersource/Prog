@@ -29,7 +29,7 @@ public class ThreadServer extends Thread{
             BufferedReader br=new BufferedReader(new InputStreamReader(s.getInputStream())); //classe per leggere ciò che mi viene passato dal socket
             String str;
             while((str=br.readLine())!=null){ //finché c'è qualcosa da leggere
-            if(str.equals("0")){ //equals è per le stringhe, se legge la stringa "0" interrompe la thread
+            if(str.equals("0")){ //se legge il valore castato in stringa "0" interrompe la thread
                 break;
             }
             else{

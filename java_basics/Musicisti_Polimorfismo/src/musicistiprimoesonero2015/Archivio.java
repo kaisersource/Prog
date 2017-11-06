@@ -26,8 +26,8 @@ public class Archivio {
          public int numeroMusicisti(double n){
              int c=0;
              for (int i=0; i<V.length; i++)
-                 if (V[i].rimborsoSpese()>n ){
-                     c++;
+                 if (V[i].rimborsoSpese()>n ){ //se il rimborso spese supera n=100
+                     c++; //contatore dei musicisti
                  }
          return c; 
     }

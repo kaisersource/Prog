@@ -23,16 +23,16 @@ public class Client {
      */
     public static void main(String[] args) {
         try {
-            int port = 3003;
-            String ip = "localhost";
-            Socket s = new Socket(ip, port);
+            int port = 3003; //porta
+            String ip = "localhost"; //ip di autoriferimento
+            Socket s = new Socket(ip, port); //creo un oggetto socket con i relativi parametri
             int a;//elemento casuale
             PrintWriter out = new PrintWriter(s.getOutputStream(), true); //la printwriter consente stampa degli oggetti in stringhe
             int n = (int) (Math.random() * 30); //numero degli elementi casuali
             int k;
             for (int i = 0; i < n; i++) {
                 k=(int)(Math.random()*10);
-                out.println(k);
+                out.println(k); 
             }
             out.println(0); 
             out.close();//chiusura dello stream

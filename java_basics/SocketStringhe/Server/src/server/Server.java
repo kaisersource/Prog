@@ -29,7 +29,7 @@ public class Server {
             while(true){
                 n=(int)(Math.random()*10); //generazione del numero
                 s=ss.accept(); //assegno il parametro restituito dal metodo accept
-                Thread t=new ThreadServer(s,n); //threadserver vuore il risultato della accept e il numero n generato casualmente
+                Thread t=new ThreadServer(s,n); //threadserver vuole il risultato della accept e il numero n generato casualmente
                 t.start(); //fa partire la thread
             }
         } catch (IOException ex) {
