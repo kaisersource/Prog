@@ -15,9 +15,11 @@ import java.net.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+//la thread la creo per far sì che ogni volta che avviene una richiesta da parte del client, il server è pronto per dare il suo riscontro.
 
 public class ThreadServer extends Thread{
-    Socket s; //socket di recezione 
+
+Socket s; //creazione del socketserver 
     int m,n,count=0; //queste sono variabili di classe
     
     public ThreadServer(Socket s,int n){ //parametri del costruttore
@@ -26,11 +28,14 @@ public class ThreadServer extends Thread{
     }
     public void run(){ //ciò che viene eseguito quando eseguo la start
         try {
-            BufferedReader br=new BufferedReader(new InputStreamReader(s.getInputStream())); //classe per leggere ciò che mi viene passato dal socket
+            
+						//classe per leggere ciò che mi viene passato dal socket
+						BufferedReader br=new BufferedReader(new InputStreamReader(s.getInputStream())); 
             String str;
             while((str=br.readLine())!=null){ //finché c'è qualcosa da leggere
-            if(str.equals("0")){ //se legge il valore castato in stringa "0" interrompe la thread
-                break;
+            
+						if(str.equals("0")){ //se legge il valore castato in stringa "0" interrompe la thread
+                break;//interruzione della thread con conseguenze chiusura del buffer e socket
             }
             else{
                 
