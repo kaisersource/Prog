@@ -34,12 +34,12 @@ public class Client {
                 k=(int)(Math.random()*10);
                 out.println(k); 
             }
-            out.println(0); 
+            out.println(0);//lo zero chiude 
             out.close();//chiusura dello stream
             s.close();//chiusura del socket
 
         } catch (IOException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex); //rilevamento e stampa degli errori
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex); //rilevamento delle anomalie e stampa degli errori
         }
     }
 

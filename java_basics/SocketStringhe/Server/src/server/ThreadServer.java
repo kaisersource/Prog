@@ -17,7 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ThreadServer extends Thread{
-    Socket s; 
+    Socket s; //socket di recezione 
     int m,n,count=0; //queste sono variabili di classe
     
     public ThreadServer(Socket s,int n){ //parametri del costruttore
@@ -46,7 +46,8 @@ public class ThreadServer extends Thread{
             br.close(); //chiusura del buffer
             s.close(); //chiusura del socket
         } catch (IOException ex) {
-            Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex); //restituisce 
+            Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex); //lancia eccezioni nel caso di comportamenti anomali
+																																												//del thread
         }
     }
 }
